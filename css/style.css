@@ -1,3 +1,16 @@
+:root {
+    /* palette */
+    --navbar-bg-color: #000000;
+    --player-bg-color: #282828;
+    --body-bg-color: #141922;
+    --text-primary-color: white;
+
+    /* layout */
+    --player-height: 80px;
+    --app-navbar-width: 50px;
+    --top-bar-height: 80px;
+}
+
 /* RESET */
 
 * {
@@ -8,6 +21,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--body-bg-color);
 }
 
 img {
@@ -42,3 +56,36 @@ a {
     background-color: lightslategray;
     padding: 2rem;
 }
+
+/* APP TOP */
+
+#app-top {
+    height: calc(100vh - var(--player-height));
+    display: flex;
+
+}
+
+/* APP PLAYER */
+
+#app-player {
+    height: var(--player-height);
+    background-color: var(--player-bg-color);
+}
+
+/* APP NAVBAR */
+#app-navbar {
+    background-color: var(--navbar-bg-color);
+    width: var(--app-navbar-width)
+}
+
+/* APP MAIN */
+#app-main {
+    flex-grow: 1;
+}
+
+#main-top-bar {
+    height: var(--top-bar-height);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media all and (min-width: 768px) {}
